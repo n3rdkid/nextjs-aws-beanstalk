@@ -86,6 +86,7 @@ jobs:
       - name: Build the consumer package
         if: ${{ startsWith(github.ref, 'refs/heads/') || (startsWith(github.ref, 'refs/tags/v') && steps.tag_test.outputs.is_consumer == 'true') }}
         run: |
+         npm run build
          echo "Build Consumer"
          echo ${{github.event_name}} ${{github.ref}}
       
