@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          AWS BeanStalk TEST
+          AWS BeanStalk TEST - 01
         </h1>
 
         <p className={styles.description}>
