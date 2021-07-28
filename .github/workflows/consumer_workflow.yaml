@@ -4,7 +4,7 @@ on:
     branches:
       - "develop"
       - "main"
-      
+
 
 jobs:
   setup_environment:
@@ -56,7 +56,7 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Initializing dependencies
         if: steps.npm-cache.outputs.cache-hit != 'true'
-        run:  yarn bootstrap
+        run:  yarn install
 
       - name: Creating & Initializing env variables 
         run: |
