@@ -4,6 +4,7 @@ on:
     branches:
       - "develop"
       - "main"
+      
 
 jobs:
   setup_environment:
