@@ -92,7 +92,7 @@ jobs:
       
       - name: Generate deployment package for consumer
         if: ${{ github.event_name == 'push' && (github.ref == 'refs/heads/develop' || (startsWith(github.ref, 'refs/tags/v') && steps.tag_test.outputs.is_consumer == 'true')) }}
-        run: zip -r deploy.zip . -x '*.git*'
+        run: zip -r deploy.zip . -x 'node_modules/*' -x '*.git*'
       
       - name: Get timestamp
         if: ${{ github.event_name == 'push' && (github.ref == 'refs/heads/develop' || (startsWith(github.ref, 'refs/tags/v') && steps.tag_test.outputs.is_consumer == 'true')) }}
